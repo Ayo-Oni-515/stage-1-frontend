@@ -13,7 +13,7 @@ body {
     justify-content: center;
     margin: auto;
     height: 100vh;
-    max-width: 310px;
+    max-width: 340px;
 }
 
 h2 {
@@ -21,12 +21,14 @@ h2 {
     margin-bottom: 10px;
 }
 
+
 /* game instruction styling */
 #game-instruction {
     margin: 10px 0px;
     padding: 10px;
     text-align: center;
 }
+
 
 /* game section styling */
 section {
@@ -41,7 +43,7 @@ section {
     width: 50%;
     margin: auto;
     height: 50px;
-    background-color: #ff0000;
+    /* background-color: #ff0000; */
     border-radius: 5px;
 }
 
@@ -60,18 +62,14 @@ section {
 .color-button {
     width: 100%;
     height: 50px;
-    background-color: #ff0000;
+    /* background-color: #ff9790; */
     border-radius: 5px;
     border: none;
 }
 
-button {
-    transition: transform 0.3s ease-in-out;
-    touch-action: manipulation;
-}
 
 button:active {
-    transform: scale(0.9);
+    transform: scale(0.8);
     cursor: pointer;
 }
 
@@ -81,7 +79,10 @@ button:active {
     margin: 10px 0px;
     text-align: center;
     padding: 10px;
+}
 
+#game, #status {
+    font-weight: bold;
 }
 
 
@@ -96,7 +97,41 @@ button:active {
     border: none;
     border-radius: 3px;
     padding: 10px;
-    background-color: #67df67;
+    background-color: #36de36;
     color: #ffffff;
     font-size: 18px;
 }
+
+
+/* Animation styling */
+@keyframes fade-out {
+    0% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.0;
+    }   
+}
+
+.fade-out {
+    animation: fade-out 1s ease-out forwards;
+}
+
+@keyframes celebration {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(0.3);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+    
+}
+
+.celebration {
+    animation: celebration 1s ease-out forwards;
+
+}
+
